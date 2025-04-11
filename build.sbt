@@ -1,4 +1,4 @@
-val scala3Version = "3.5.2"
+val scala3Version = "3.6.4"
 
 
 lazy val root = project
@@ -19,3 +19,6 @@ enablePlugins(ScalaJSPlugin)
 
 // This is an application with a main method
 scalaJSUseMainModuleInitializer := true
+
+// Single Threaded Tests
+Test / parallelExecution := false
