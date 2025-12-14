@@ -1,8 +1,9 @@
-val scala3Version = "3.7.2"
+val scala3Version = "3.7.4"
 
 
 lazy val root = project
   .in(file("."))
+  .enablePlugins(ScalaJSPlugin)
   .settings(
     name := "dom",
     version := "0.1.0-SNAPSHOT",
@@ -14,8 +15,6 @@ lazy val root = project
       "org.scala-js" %%% "scalajs-dom" % "2.8.1")
   )
 
-
-enablePlugins(ScalaJSPlugin)
 
 // This is an application with a main method
 scalaJSUseMainModuleInitializer := true
